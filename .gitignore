@@ -1,0 +1,13 @@
+# Visual Studio 
+.vs/
+Debug/
+Release/
+x64/
+x86/
+*.vcxproj*
+*.sln
+
+# Executables
+*.exe
+*.out
+*.app
