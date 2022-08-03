@@ -6,14 +6,14 @@ using std::string;
 enum UNITS { PIECE, KG, PACK, PAIR };
 
 template <class TUNIT>
-class ProductType {
+class Product {
 protected:
     UNITS unit;
     string prod_name;
     TUNIT amount;
 public:
     // constructors
-    ProductType(const string& _name, UNITS _unit, TUNIT _amount = 0);
+    Product(const string& _name, UNITS _unit, TUNIT _amount = 0);
     // getters
     void show_details();
     // setters
@@ -23,7 +23,7 @@ public:
 // Construct & Destruct
 
 template <class TUNIT>
-ProductType<TUNIT>::ProductType(const string& _name, UNITS _unit, TUNIT _amount) {
+Product<TUNIT>::Product(const string& _name, UNITS _unit, TUNIT _amount) {
     prod_name = _name;
     unit = _unit;
     amount = _amount;
@@ -32,7 +32,7 @@ ProductType<TUNIT>::ProductType(const string& _name, UNITS _unit, TUNIT _amount)
 // Getters
 
 template <class TUNIT>
-void ProductType<TUNIT>::show_details() {
+void Product<TUNIT>::show_details() {
     std::cout << "-------------------" << std::endl;
     std::cout << "Details of product:" << std::endl;
     std::cout << " Name:  \t" << prod_name << std::endl;
@@ -43,6 +43,6 @@ void ProductType<TUNIT>::show_details() {
 // Setters
 
 template <class TUNIT>
-void ProductType<TUNIT>::set_amount(TUNIT _amount) {
+void Product<TUNIT>::set_amount(TUNIT _amount) {
     amount = _amount;
 }

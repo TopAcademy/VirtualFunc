@@ -5,7 +5,7 @@
 
 enum Gender { MEN, WOMEN, BOYS, GIRLS };
 
-class Footwear : public ProductType<int>, public ForSale
+class Footwear : public Product<int>, public ForSale
 {
 protected:
 	static const std::string gender_names[];
@@ -27,7 +27,7 @@ const std::string Footwear::gender_names[] = { "MEN", "WOMEN", "BOYS", "GIRLS" }
 
 
 Footwear::Footwear(const string& _name, unsigned _size, Gender _gender, int _amount)
-	: ProductType<int>(_name, PAIR, _amount)
+	: Product<int>(_name, PAIR, _amount)
 {
 	shoe_size = _size;
 	gender = _gender;
@@ -37,7 +37,7 @@ Footwear::Footwear(const string& _name, unsigned _size, Gender _gender, int _amo
 
 void Footwear::show_details()
 {
-	ProductType<int>::show_details();
+	Product<int>::show_details();
 	std::cout << " Size:  \t" << shoe_size << std::endl;
 	std::cout << " Gender:\t" << gender_names[gender] << std::endl;
 	std::cout << "-------------------" << std::endl;
