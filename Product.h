@@ -14,9 +14,9 @@ public:
     // constructors
     Product(const string& _name, UNITS _unit, int _amount = 0);
     // getters
-    void show_details();
+    virtual void show_details();
     // setters
-    void set_amount(int _amount);
+    virtual void set_amount(int _amount);
 };
 
 // Construct & Destruct

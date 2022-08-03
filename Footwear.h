@@ -16,8 +16,9 @@ public:
 	// Constructors
 	Footwear(const string& _name, unsigned _size, Gender _gender, int _amount = 0);
 	// Getters
-	void show_details();
+	virtual void show_details();
 };
+
 
 // Statics
 

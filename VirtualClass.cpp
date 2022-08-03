@@ -14,8 +14,16 @@ using std::endl;
 
 int main(int argc, char** argv)
 {
-	Product* p = new Product("Shoes", PAIR, 5);
+	//ForSale s;
+	//s.set_price(10, 20);
+	//cout << s.get_price();
 
+
+	ForSale * p;
+	p = new Footwear("Shoes", 44, MEN, 5);
+	p->set_price(990, 90);
+	p->show_details();
+	cout << p->get_price() << endl;
 
 
 }

@@ -9,6 +9,7 @@ public:
 	ForSale();
 	void set_price(int _rub, short _kop);
 	float get_price();
+	virtual void show_details() = 0;
 };
 
 ForSale::ForSale()
